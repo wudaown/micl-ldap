@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  frontend:
+    image: zzswang/docker-nginx-react
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - ./micl-ldap-react/build/:/app
+#    depends_on:
+#      - api
+#  api:
+#    build: .
+#    restart: always
+#    ports:
+#      - "5000:80"
